@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			addHomeApplianceButton = new Button();
-			removeButton = new Button();
 			printButton = new Button();
 			brandTextBox = new TextBox();
 			priceTextBox = new TextBox();
@@ -43,24 +42,15 @@
 			// 
 			addHomeApplianceButton.Location = new Point(12, 52);
 			addHomeApplianceButton.Name = "addHomeApplianceButton";
-			addHomeApplianceButton.Size = new Size(100, 23);
+			addHomeApplianceButton.Size = new Size(100, 40);
 			addHomeApplianceButton.TabIndex = 0;
 			addHomeApplianceButton.Text = "Add Home Appliance";
 			addHomeApplianceButton.UseVisualStyleBackColor = true;
 			addHomeApplianceButton.Click += addHomeApplianceButton_Click;
 			// 
-			// removeButton
-			// 
-			removeButton.Location = new Point(12, 92);
-			removeButton.Name = "removeButton";
-			removeButton.Size = new Size(100, 23);
-			removeButton.TabIndex = 1;
-			removeButton.Text = "Remove";
-			removeButton.UseVisualStyleBackColor = true;
-			// 
 			// printButton
 			// 
-			printButton.Location = new Point(12, 132);
+			printButton.Location = new Point(118, 92);
 			printButton.Name = "printButton";
 			printButton.Size = new Size(100, 23);
 			printButton.TabIndex = 2;
@@ -70,34 +60,41 @@
 			// 
 			// brandTextBox
 			// 
+			brandTextBox.ForeColor = Color.Gray;
 			brandTextBox.Location = new Point(12, 12);
 			brandTextBox.Name = "brandTextBox";
 			brandTextBox.Size = new Size(100, 23);
 			brandTextBox.TabIndex = 3;
 			brandTextBox.Text = "Brand";
 			brandTextBox.Enter += brandTextBox_Enter;
+			brandTextBox.Leave += brandTextBox_Leave;
 			// 
 			// priceTextBox
 			// 
+			priceTextBox.ForeColor = Color.Gray;
 			priceTextBox.Location = new Point(118, 12);
 			priceTextBox.Name = "priceTextBox";
 			priceTextBox.Size = new Size(100, 23);
 			priceTextBox.TabIndex = 4;
 			priceTextBox.Text = "Price";
 			priceTextBox.Enter += priceTextBox_Enter;
+			priceTextBox.Leave += priceTextBox_Leave;
 			// 
 			// paramTextBox
 			// 
+			paramTextBox.ForeColor = Color.Gray;
 			paramTextBox.Location = new Point(224, 12);
 			paramTextBox.Name = "paramTextBox";
 			paramTextBox.Size = new Size(100, 23);
 			paramTextBox.TabIndex = 5;
 			paramTextBox.Text = "Temperture/Volume";
 			paramTextBox.Enter += paramTextBox_Enter;
+			paramTextBox.Leave += paramTextBox_Leave;
 			// 
 			// printTextBox
 			// 
-			printTextBox.Location = new Point(12, 172);
+			printTextBox.BackColor = SystemColors.Window;
+			printTextBox.Location = new Point(330, 12);
 			printTextBox.Multiline = true;
 			printTextBox.Name = "printTextBox";
 			printTextBox.ReadOnly = true;
@@ -128,7 +125,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(654, 196);
 			Controls.Add(addFridgeButton);
 			Controls.Add(addMicrowaveButton);
 			Controls.Add(printTextBox);
@@ -136,10 +133,11 @@
 			Controls.Add(priceTextBox);
 			Controls.Add(brandTextBox);
 			Controls.Add(printButton);
-			Controls.Add(removeButton);
 			Controls.Add(addHomeApplianceButton);
+			FormBorderStyle = FormBorderStyle.Fixed3D;
+			MaximizeBox = false;
 			Name = "Form1";
-			Text = "Form1";
+			Text = "Practice5";
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -147,7 +145,6 @@
 		#endregion
 
 		private Button addHomeApplianceButton;
-		private Button removeButton;
 		private Button printButton;
 		private TextBox brandTextBox;
 		private TextBox priceTextBox;

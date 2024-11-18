@@ -18,7 +18,7 @@ namespace practice5
 		public string Brand
 		{
 			get => brand;
-			set => brand = value;
+			set => brand = string.IsNullOrEmpty(value) ? throw new ArgumentNullException("Brand") : value;
 		}
 		public int Price
 		{
