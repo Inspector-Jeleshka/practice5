@@ -18,7 +18,9 @@ namespace practice5
 			get => volume;
 			set
 			{
-				ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, "Volume");
+                if (value < 1)
+                    throw new ArgumentOutOfRangeException("Volume");
+                //ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, "Volume");
 				volume = value;
 			}
 		}

@@ -25,7 +25,9 @@ namespace practice5
 			get => price;
 			set
 			{
-				ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, "Price");
+                if (value < 1)
+                    throw new ArgumentOutOfRangeException("Price");
+                //ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, "Price");
 				price = value;
 			}
 		}

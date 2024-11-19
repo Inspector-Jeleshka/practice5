@@ -18,7 +18,9 @@ namespace practice5
 			get => temp;
 			set
 			{
-				ArgumentOutOfRangeException.ThrowIfGreaterThan(value, 5, "Temp");
+				if (value > 5)
+					throw new ArgumentOutOfRangeException("Temp");
+				//ArgumentOutOfRangeException.ThrowIfGreaterThan(value, 5, "Temp");
 				temp = value;
 			}
 		}
